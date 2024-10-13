@@ -1,6 +1,3 @@
----
-layout: default
----
 
 
 ### Simple Regression
