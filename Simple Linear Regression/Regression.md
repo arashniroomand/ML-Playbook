@@ -1,3 +1,8 @@
+---
+layout: default
+---
+
+
 ### Simple Regression
 
 **Simple Regression**, specifically **Simple Linear Regression**, is a statistical method used to understand the relationship between two continuous variables: a **dependent variable** (or target) and an **independent variable** (or predictor). The goal is to model this relationship by fitting a linear equation to the data.
