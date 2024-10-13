@@ -1,6 +1,3 @@
----
-layout: default
----
 
 
 ### Simple Regression
@@ -10,7 +7,7 @@ layout: default
 The general equation for simple linear regression is:
 
 
-$ y = \beta_0 + \beta_1 x + \epsilon $
+$$ y = \beta_0 + \beta_1 x + \epsilon $$
 
 
 Where:
