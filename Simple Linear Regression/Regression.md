@@ -11,7 +11,7 @@ $$ y = \beta_0 + \beta_1 x + \epsilon $$
 
 
 Where:
-- $ y $: Dependent variable (what you want to predict)
+- $y$: Dependent variable (what you want to predict)
 - $ x $: Independent variable (predictor)
 - $ \beta_0 $: Intercept (the value of $ y $ when $ x = 0 $)
 - $ \beta_1 $: Slope of the line (how much $ y $ changes for a unit increase in $ x $)
