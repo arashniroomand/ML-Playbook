@@ -25,9 +25,9 @@ Where:
 
 3. **Linear Relationship**: Simple regression assumes that the relationship between $x $and $y$ is linear, meaning changes in $x$ result in proportional changes in $y$.
 
-4. **Slope ( $\beta_1$)**: This represents the amount by which $y $changes for every one-unit increase in $x$.
+4. **Slope ( $\beta_1$)**: This represents the amount by which $y$ changes for every one-unit increase in $x$.
 
-5. **Intercept ( $\beta_0$)**: This represents the value of $y$when $x = 0$.
+5. **Intercept ( $\beta_0$)**: This represents the value of $y$ when $x = 0$.
 
 6. **Fitting the Model**: The process of determining the slope and intercept values that minimize the error in predicting $y$ from $x$.
 
@@ -38,7 +38,7 @@ Where:
 Here’s a step-by-step example of simple linear regression in Python using `scikit-learn`.
 
 #### Dataset Example
-We'll use a dataset that relates years of experience ( $x$) to salary ( $y $).
+We'll use a dataset that relates years of experience ( $x$) to salary ( $y$).
 
 #### Step 1: Import Required Libraries
 
@@ -154,7 +154,7 @@ The **R² score**, or **coefficient of determination**, is a key metric in regre
 #### Formula for R²
 
 
-$ R^2 = 1 - \frac{SS_{res}}{SS_{tot}} $
+$$ R^2 = 1 - \frac{SS_{res}}{SS_{tot}} $$
 
 
 Where:
@@ -185,10 +185,10 @@ print(f"R² Score: {r2}")
 
 #### Example Scenario
 
-Imagine you are predicting salaries based on years of experience. The $R^2 $score helps you understand how well your model explains the variation in salaries.
+Imagine you are predicting salaries based on years of experience. The $R^2$ score helps you understand how well your model explains the variation in salaries.
 
 - If $R^2 = 0.9$, it means 90% of the variation in salaries can be explained by the years of experience. This suggests that experience is a strong predictor of salary.
-- If $R^2 = 0.3 $, it means only 30% of the variation in salaries can be explained by the years of experience, implying that other factors besides experience might play a large role in determining salary.
+- If $R^2 = 0.3$, it means only 30% of the variation in salaries can be explained by the years of experience, implying that other factors besides experience might play a large role in determining salary.
 
 #### Graphical Representation
 
