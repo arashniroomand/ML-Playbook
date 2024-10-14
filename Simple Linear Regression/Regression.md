@@ -14,7 +14,7 @@ Where:
 -  $y$: Dependent variable (what you want to predict)
 -  $x$: Independent variable (predictor)
 -  $\beta_0$: Intercept (the value of $y$ when $x = 0$)
--  $\beta_1$: Slope of the line (how much $y$changes for a unit increase in $x$)
+-  $\beta_1$: Slope of the line (how much $y$ changes for a unit increase in $x$)
 -  $\epsilon$: Error term (the difference between observed and predicted values)
 
 ### Key Concepts
@@ -23,9 +23,9 @@ Where:
 
 2. **Dependent Variable (Target)**: The outcome variable, denoted as $y$, that we are trying to predict based on $x$.
 
-3. **Linear Relationship**: Simple regression assumes that the relationship between $x $and $y $is linear, meaning changes in $x$ result in proportional changes in $y $.
+3. **Linear Relationship**: Simple regression assumes that the relationship between $x $and $y$ is linear, meaning changes in $x$ result in proportional changes in $y$.
 
-4. **Slope ( $\beta_1$)**: This represents the amount by which $y $changes for every one-unit increase in $x $.
+4. **Slope ( $\beta_1$)**: This represents the amount by which $y $changes for every one-unit increase in $x$.
 
 5. **Intercept ( $\beta_0$)**: This represents the value of $y$when $x = 0$.
 
@@ -125,7 +125,7 @@ plt.show()
   
 - **Slope (β₁)**: The slope represents how much salary increases for each additional year of experience.
 
-- **R² Score**: This score tells us how well the regression line fits the data. A score of 1 indicates a perfect fit, while 0 indicates no relationship between $x $and $y $.
+- **R² Score**: This score tells us how well the regression line fits the data. A score of 1 indicates a perfect fit, while 0 indicates no relationship between $x$ and $y$.
 
 ### Interpretation:
 - The red line represents the **linear relationship** between years of experience and salary.
