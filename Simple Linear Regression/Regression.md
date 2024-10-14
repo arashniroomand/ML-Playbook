@@ -7,38 +7,38 @@
 The general equation for simple linear regression is:
 
 
-$$ y = \beta_0 + \beta_1 x + \epsilon $$
+ $$y = \beta_0 + \beta_1 x + \epsilon$$
 
 
 Where:
-- $y$: Dependent variable (what you want to predict)
-- $ x $: Independent variable (predictor)
-- $ \beta_0 $: Intercept (the value of $ y $ when $ x = 0 $)
-- $ \beta_1 $: Slope of the line (how much $ y $ changes for a unit increase in $ x $)
-- $ \epsilon $: Error term (the difference between observed and predicted values)
+-  $y$: Dependent variable (what you want to predict)
+-  $x$: Independent variable (predictor)
+-  $\beta_0$: Intercept (the value of $y$ when $x = 0$)
+-  $\beta_1$: Slope of the line (how much $y$changes for a unit increase in $x$)
+-  $\epsilon$: Error term (the difference between observed and predicted values)
 
 ### Key Concepts
 
-1. **Independent Variable (Predictor)**: The variable used to predict the dependent variable. It's often referred to as $ x $.
+1. **Independent Variable (Predictor)**: The variable used to predict the dependent variable. It's often referred to as $x $.
 
-2. **Dependent Variable (Target)**: The outcome variable, denoted as $ y $, that we are trying to predict based on $ x $.
+2. **Dependent Variable (Target)**: The outcome variable, denoted as $y$, that we are trying to predict based on $x$.
 
-3. **Linear Relationship**: Simple regression assumes that the relationship between $ x $ and $ y $ is linear, meaning changes in $ x $ result in proportional changes in $ y $.
+3. **Linear Relationship**: Simple regression assumes that the relationship between $x $and $y $is linear, meaning changes in $x$ result in proportional changes in $y $.
 
-4. **Slope ($ \beta_1 $)**: This represents the amount by which $ y $ changes for every one-unit increase in $ x $.
+4. **Slope ( $\beta_1$)**: This represents the amount by which $y $changes for every one-unit increase in $x $.
 
-5. **Intercept ($ \beta_0 $)**: This represents the value of $ y $ when $ x = 0 $.
+5. **Intercept ( $\beta_0$)**: This represents the value of $y$when $x = 0$.
 
-6. **Fitting the Model**: The process of determining the slope and intercept values that minimize the error in predicting $ y $ from $ x $.
+6. **Fitting the Model**: The process of determining the slope and intercept values that minimize the error in predicting $y$ from $x$.
 
-7. **Residuals**: The difference between the actual and predicted values of $ y $.
+7. **Residuals**: The difference between the actual and predicted values of $y$.
 
 ### Python Implementation
 
 Here’s a step-by-step example of simple linear regression in Python using `scikit-learn`.
 
 #### Dataset Example
-We'll use a dataset that relates years of experience ($ x $) to salary ($ y $).
+We'll use a dataset that relates years of experience ( $x$) to salary ( $y $).
 
 #### Step 1: Import Required Libraries
 
@@ -125,11 +125,11 @@ plt.show()
   
 - **Slope (β₁)**: The slope represents how much salary increases for each additional year of experience.
 
-- **R² Score**: This score tells us how well the regression line fits the data. A score of 1 indicates a perfect fit, while 0 indicates no relationship between $ x $ and $ y $.
+- **R² Score**: This score tells us how well the regression line fits the data. A score of 1 indicates a perfect fit, while 0 indicates no relationship between $x $and $y $.
 
 ### Interpretation:
 - The red line represents the **linear relationship** between years of experience and salary.
-- If you have more years of experience ($ x $), the predicted salary ($ y $) increases linearly according to the model's slope and intercept.
+- If you have more years of experience ( $x$), the predicted salary ( $y$) increases linearly according to the model's slope and intercept.
 
 ### Conclusion
 
@@ -154,18 +154,18 @@ The **R² score**, or **coefficient of determination**, is a key metric in regre
 #### Formula for R²
 
 
-$$R^2 = 1 - \frac{SS_{res}}{SS_{tot}}$$
+$ R^2 = 1 - \frac{SS_{res}}{SS_{tot}} $
 
 
 Where:
-- $SS_{res} $ is the **sum of squared residuals**: the total squared difference between the actual and predicted values of $ y $.
-- $ SS_{tot} $ is the **total sum of squares**: the total squared difference between the actual values of $ y $ and the mean of $ y $.
+-  $SS_{res}$ is the **sum of squared residuals**: the total squared difference between the actual and predicted values of $y $.
+- $SS_{tot}$ is the **total sum of squares**: the total squared difference between the actual values of $y $and the mean of $y $.
 
 #### Interpretation
 
-- $ R^2 = 1 $: A perfect fit. The model explains 100% of the variability in the dependent variable (all data points lie exactly on the regression line).
-- $ R^2 = 0 $: The model does not explain any of the variability. This would be equivalent to using the mean of $ y $ as the predicted value for all data points.
-- $ R^2 < 0 $: The model is worse than a horizontal line at the mean of $ y $, meaning it does not fit the data well at all.
+- $R^2 = 1 $: A perfect fit. The model explains 100% of the variability in the dependent variable (all data points lie exactly on the regression line).
+- $R^2 = 0 $: The model does not explain any of the variability. This would be equivalent to using the mean of $y $as the predicted value for all data points.
+- $R^2 < 0 $: The model is worse than a horizontal line at the mean of $y $, meaning it does not fit the data well at all.
 
 In general:
 - **Higher R² values** indicate that the model explains more of the variance in the dependent variable.
@@ -185,7 +185,7 @@ print(f"R² Score: {r2}")
 
 #### Example Scenario
 
-Imagine you are predicting salaries based on years of experience. The $ R^2 $ score helps you understand how well your model explains the variation in salaries.
+Imagine you are predicting salaries based on years of experience. The $R^2 $score helps you understand how well your model explains the variation in salaries.
 
 - If $R^2 = 0.9$, it means 90% of the variation in salaries can be explained by the years of experience. This suggests that experience is a strong predictor of salary.
 - If $R^2 = 0.3 $, it means only 30% of the variation in salaries can be explained by the years of experience, implying that other factors besides experience might play a large role in determining salary.
@@ -195,11 +195,11 @@ Imagine you are predicting salaries based on years of experience. The $ R^2 $ sc
 If we visualize the regression line:
 
 - **High R²**: Most of the data points are close to the line, indicating that the model explains a large proportion of the variance in the data.
-- **Low R²**: Data points are scattered far from the line, meaning the model is not capturing much of the relationship between $x$ and $ y $.
+- **Low R²**: Data points are scattered far from the line, meaning the model is not capturing much of the relationship between $x$ and $y$ .
 
 #### Limitations of R²
 
-- **R² alone does not measure model accuracy**: A high $ R^2 $ doesn’t necessarily mean your model is good. It could simply mean that the relationship is strong, but the model might still be poorly specified or could be overfitting.
+- **R² alone does not measure model accuracy**: A high $R^2$ doesn’t necessarily mean your model is good. It could simply mean that the relationship is strong, but the model might still be poorly specified or could be overfitting.
   
 - **R² can be misleading for small datasets**: For small datasets, the R² value might not provide a reliable measure of the model’s performance.
 
@@ -207,5 +207,5 @@ If we visualize the regression line:
 
 ### Conclusion
 
-The $ R^2 $ score is a useful metric to understand the proportion of variance explained by the model, but it should be used in combination with other evaluation metrics (like Mean Squared Error or Cross-Validation scores) to fully assess model performance.
+The $R^2$ score is a useful metric to understand the proportion of variance explained by the model, but it should be used in combination with other evaluation metrics (like Mean Squared Error or Cross-Validation scores) to fully assess model performance.
 
