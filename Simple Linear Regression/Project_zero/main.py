@@ -1,15 +1,17 @@
-from constant import MENU
-from utility import set_values, find_best_values
+from constant import MENU , OPTIONS
+from utility import set_values, find_best_values, loss_function
 
 
 def menu():
     print(MENU)
     print()
-    find_best_values(set_values()) 
-    
+    print(OPTIONS)
+    option = input("ENTER YOUR CHOICE: ".rjust(100))
+    match option:
+        case '1':
+            set_values('loss')
 
 menu()
-    
     
     
     
