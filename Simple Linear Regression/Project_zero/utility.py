@@ -48,62 +48,42 @@ def find_best_values(m, b, L, epochs):
     print(f"Optimized m: {m}, Optimized b: {b}")
     print(f"Final Loss: {loss_function(m, b, data)}")
 
-import shutil
-
-def center_text(text):
-    """Centers text but keeps input aligned properly."""
-    terminal_width = shutil.get_terminal_size().columns
-    return text.center(terminal_width)
 
 def set_values(temp):
     terminal_width = shutil.get_terminal_size().columns  # Get terminal width dynamically
 
     if temp == 'loss':
-        print(center_text(LOSS_OPTIONS))  # Centered text
+        print(LOSS_OPTIONS.center(terminal_width))  # Center LOSS_OPTIONS
         print()
-        print(center_text("WRITE YOUR CHOICE HERE: "), end="")  # Keep input cursor aligned
-        option = input()  # Normal input without shifting cursor
-
+        option = input("WRITE YOUR CHOICE HERE: ".center(terminal_width))  # Centered input prompt
         if option == '1':
             try:
-                print(center_text("ENTER THE START AND THE END OF SPAN FOR m: "), end="")
-                start_m, end_m = map(int, input().split())
-
-                print(center_text("ENTER THE START AND THE END OF SPAN FOR b: "), end="")
-                start_b, end_b = map(int, input().split())
+                start_m, end_m = map(int, input("ENTER THE START AND THE END OF SPAN FOR m: ".center(terminal_width)).split())
+                start_b, end_b = map(int, input("ENTER THE START AND THE END OF SPAN FOR b: ".center(terminal_width)).split())
 
                 best_m, best_b, final_result = check_values(start_m, end_m, start_b, end_b)
                 print()
-                print(center_text(f"Optimized m: {best_m}, Optimized b: {best_b}. The loss is {final_result}"))
+                print(f"{'Optimized m:':<20}{best_m}, {'Optimized b:':<20}{best_b}. {'The loss is':<20}{final_result}".center(terminal_width))
                 return 
-
             except ValueError:
-                print(center_text("Invalid input! Please enter two integer values separated by a space."))
+                print("Invalid input! Please enter two integer values separated by a space.".center(terminal_width))
 
         elif option == '2':
             print()
-            print(center_text("PLEASE ENTER THE m VALUE: "), end="")
-            m = int(input())
-
-            print(center_text("PLEASE ENTER THE b VALUE: "), end="")
-            b = int(input())
-
+            m = int(input("PLEASE ENTER THE m VALUE: ".center(terminal_width)))
+            b = int(input("PLEASE ENTER THE b VALUE: ".center(terminal_width)))
             loss = loss_function(m, b, data)
-            print(center_text(f"Loss with {m}*x + {b} is {loss}"))
+            print(f"Loss with {m}*x + {b} is {loss}".center(terminal_width))
+        
+        elif option == '3':
+            return
 
-    else:
-        print(center_text("*****WE SUGGEST YOU TO SET M AND B ZERO AT THE FIRST STEP BUT YOU SHOULD CONSIDER YOUR DATA FIRST****"))
+    elif temp == 'Gradient':
+        print("*****WE SUGGEST YOU TO SET M AND B ZERO AT THE FIRST STEP BUT YOU SHOULD CONSIDER YOUR DATA FIRST****".center(terminal_width))
         print()
-        print(center_text("PLEASE ENTER THE M VALUE: "), end="")
-        m = int(input())
-
-        print(center_text("PLEASE ENTER THE B VALUE: "), end="")
-        b = int(input())
-
-        print(center_text("ENTER LEARNING RATE (USUALLY BETWEEN 0 AND 1 LIKE 0.01): "), end="")
-        L = float(input())
-
-        print(center_text("ENTER THE NUMBER OF ITERATIONS: "), end="")
-        epochs = int(input())
-
-        return m, b, L, epochs
+        m = int(input("PLEASE ENTER THE M VALUE: ".center(terminal_width)))
+        b = int(input("PLEASE ENTER THE B VALUE: ".center(terminal_width)))
+        L = float(input("ENTER LEARNING RATE (USUALLY BETWEEN 0 AND 1 LIKE 0.01): ".center(terminal_width)))
+        epochs = int(input("ENTER THE NUMBER OF ITERATIONS: ".center(terminal_width)))
+        best_m, best_b = gradient_descent(m, b, L, epochs) 
+        print(f"{'Optimized m:':<20}{best_m}, {'Optimized b:':<20}{best_b}.".center(terminal_width))
